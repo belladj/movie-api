@@ -5,7 +5,7 @@ CRUD Movies API with C# .NET and SQL Database
 - Endpoint: ```/Movies```
 - Method: ```GET```
 - Description: return movie list in database in JSON format
-- result example:
+- example:
 ```
 {
  {
@@ -32,7 +32,7 @@ CRUD Movies API with C# .NET and SQL Database
 - Endpoint: ```/Movies/{id}```
 - Method: ```GET```
 - Description: return movie details in JSON format
-- result example: ```Movies/1``` will result:
+- example: ```Movies/1``` will result:
 ```
 {
  "id" : 1,
@@ -49,7 +49,7 @@ CRUD Movies API with C# .NET and SQL Database
 - Endpoint: ```/Movies/```
 - Method: ```POST```
 - Description: add new movie to database, added movie will be posted as JSON
-- result example:
+- example:
 ```
 {
  "id" : 3,
@@ -62,11 +62,11 @@ CRUD Movies API with C# .NET and SQL Database
 }
 ```
 
-### 4. Add New Movie
+### 4. Edit Movie
 - Endpoint: ```/Movies/{id}```
 - Method: ```PATCH```
 - Description: edit movie in database, edited move will be posted as JSON
-- result:
+- example: editing ```Movies/2``` will result:
 ```
 {
  "id" : 2,
@@ -83,3 +83,4 @@ CRUD Movies API with C# .NET and SQL Database
 - Endpoint: ```/Movies/{id}```
 - Method: ```DELETE```
 - Description: delete movie in database
+- example: ```Movies/1```
