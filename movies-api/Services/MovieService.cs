@@ -70,6 +70,31 @@ namespace movies_api.Services
             return null;
         }
 
+        public static List<MovieModel> GetMovieByName(string name)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(SqlHelper.GetInstance().ConnectString);
+                conn.Open();
+                string sql = "Select * From Movies Where Title Like '%" + name + "%'";
+                using (SqlDataReader sqlDataReader = SqlHelper.ExecuteReader(conn, sql))
+                {
+                    List<MovieModel> results = SelectMovieByCmdTxt(sqlDataReader);
+                    if (results != null && results.Count > 0)
+                        return results;
+                }
+            }
+            catch (Exception ex) { }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+                conn = null;
+            }
+            return null;
+        }
+
         public static MovieModel GetLatestMovie()
         {
             SqlConnection conn = null;
