@@ -171,4 +171,3 @@ D:\b\Documents\github\movie-api\movies-api\obj\Debug\movies-api.csproj.CoreCompi
 D:\b\Documents\github\movie-api\movies-api\obj\Debug\movies-api.csproj.CopyComplete
 D:\b\Documents\github\movie-api\movies-api\obj\Debug\movies-api.dll
 D:\b\Documents\github\movie-api\movies-api\obj\Debug\movies-api.pdb
-D:\b\Documents\github\movie-api\movies-api\obj\Debug\movies-api.csproj.AssemblyReference.cache

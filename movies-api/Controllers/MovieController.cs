@@ -12,13 +12,9 @@ namespace movies_api.Controllers
     {
         [HttpGet]
         [Route("Movies")]
-        public JsonResult GetMovieList([System.Web.Http.FromBody] string name)
+        public JsonResult GetMovieList()
         {
-            List<MovieModel> result = MovieService.GetMovieByName(name);
-            if (string.IsNullOrEmpty(name))
-            {
-               result = MovieService.GetMovies();
-            }
+            List<MovieModel> result = MovieService.GetMovies();
             return ResultService.SuccessResult<List<MovieModel>>(result);
 
         }

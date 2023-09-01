@@ -64,7 +64,7 @@ namespace movies_api.Tests.Controllers
                 rating = 5,
                 image = ""
             };
-            var test = controller.UpdateMovie(model);
+            var test = controller.UpdateMovie(1,model);
             string json = (string)test.Data;
             BaseResult<MovieModel> result = JsonConvert.DeserializeObject<BaseResult<MovieModel>>(json);
             Assert.AreEqual(0, result.Code);
